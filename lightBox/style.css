@@ -1751,12 +1751,7 @@ body {
   }
 
   .back-btn-text {
-    font-size: 0;
-  }
-
-  .back-btn-text::before {
-    content: 'Back';
-    font-size: 11px;
+    display: inline;
   }
 }
 
