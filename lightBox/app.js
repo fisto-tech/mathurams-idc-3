@@ -183,7 +183,7 @@ function loadModel(fileOrUrl, fileName) {
   modelViewer.cameraOrbit = modelInitialOrbit;
   modelViewer.cameraTarget = modelInitialTarget;
   modelViewer.fieldOfView = modelInitialFov;
-  modelViewer.setAttribute('shadow-intensity', '0.6');
+  modelViewer.setAttribute('shadow-intensity', '1');
   modelViewer.setAttribute('shadow-softness', '1');
 
   // Reset panning state on load
@@ -569,14 +569,14 @@ requestAnimationFrame(() => {
     //   modelViewer.environmentImage = 'legacy';
     // }
 
-    modelViewer.setAttribute('shadow-intensity', '0.6');
+    modelViewer.setAttribute('shadow-intensity', '1');
   });
 });
 
   // Extra safety frame: model-viewer sometimes needs one more render tick to
   // rebuild the shadow root after toggleMesh visibility changes settle.
   setTimeout(() => {
-    modelViewer.setAttribute('shadow-intensity', '0.6');
+    modelViewer.setAttribute('shadow-intensity', '1');
   }, 50);
 });
 
