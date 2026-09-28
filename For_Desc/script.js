@@ -2094,7 +2094,39 @@ function initProductImageModal() {
         const target = e.target;
         if (!target || target.tagName !== 'IMG') return;
 
-        // Skip non-product images (such as background, icons, 3D experience thumbnails, TOC)
+        // Ignore UI overlays, drawer links, modal contents, etc.
+        if (
+            target.closest('#mobileTocPanel') ||
+            target.closest('#tocNav') ||
+            target.closest('#tocNav1') ||
+            target.closest('.thumbnail-preview-container') ||
+            target.closest('#product-image-modal') ||
+            target.closest('.exp-3d-container')
+        ) {
+            return;
+        }
+
+        const srcLower = (target.src || '').toLowerCase();
+
+        // Strictly exclude non-product section images (Home, About Us, Table of Content, Infrastructure, Contact Us, 3D Experience, etc.)
+        const isNonProductSection =
+            srcLower.includes('home-page') ||
+            srcLower.includes('about-us') ||
+            srcLower.includes('table-of-content') ||
+            srcLower.includes('infrastructure-page') ||
+            srcLower.includes('contact-us') ||
+            srcLower.includes('3d-experience') ||
+            srcLower.includes('commonthings') ||
+            srcLower.includes('background') ||
+            srcLower.includes('thumbnail') ||
+            srcLower.includes('icons') ||
+            srcLower.includes('logo') ||
+            srcLower.includes('shade') ||
+            srcLower.includes('bottom-navbar');
+
+        if (isNonProductSection) return;
+
+        // Check if image belongs to a product catalog item
         const isProductImg =
             target.id === 'cot-image' ||
             target.classList.contains('cot-image') ||
@@ -2104,13 +2136,8 @@ function initProductImageModal() {
             target.classList.contains('cot-pos4') ||
             target.classList.contains('cot-pos5') ||
             target.classList.contains('cot-pos6') ||
-            (target.src &&
-                (target.src.includes('-image.webp') || target.src.includes('-image.png')) &&
-                !target.src.includes('background') &&
-                !target.src.includes('3D-experience') &&
-                !target.src.includes('commonThings') &&
-                !target.src.includes('home-page') &&
-                !target.src.includes('table-of-content'));
+            srcLower.includes('/products/') ||
+            (srcLower.includes('-image.webp') || srcLower.includes('-image.png') || srcLower.includes('-cot') || srcLower.includes('-bed') || srcLower.includes('-stretcher'));
 
         if (isProductImg) {
             e.preventDefault();
