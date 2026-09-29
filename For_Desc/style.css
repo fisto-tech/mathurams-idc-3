@@ -1611,6 +1611,7 @@
 /* Flipbook stays centered */
 #flipbook {
   margin: auto;
+ 
   /* Centers when not zoomed */
   flex-shrink: 0;
 }
@@ -3159,11 +3160,18 @@
       .ui-arrow-control,
       .next-arrow,
       .prev-arrow {
-        bottom: calc(24px + env(safe-area-inset-bottom)) !important;
+        bottom: calc(30px + env(safe-area-inset-bottom)) !important;
       }
     }
   }
-
+/* Android Large-Height Mobile Phones */
+@media screen and (max-width: 549px) and (min-height: 800px) {
+  .ui-arrow-control,
+  .next-arrow,
+  .prev-arrow {
+    bottom: 120px !important;
+  }
+}
   /* Mobile Top Navigation Styling */
   .mobile-top-nav {
     background: #1c1c1c !important;
@@ -3844,9 +3852,11 @@ body.toc-active .ui-arrow-previous-page {
 }
 
 /* Increase Z-Index & Cursor Pointer for Website Link Images */
-img[src*="website-link.svg"] {
-  z-index: 9999 !important;
+img[src*="website-link.svg"],
+a:has(img[src*="website-link.svg"]) {
+  z-index: 99999 !important;
   cursor: pointer !important;
+  pointer-events: auto !important;
 }
 
 /* Page Number Styles - Fully Responsive across Desktop, Tablet & Mobile */

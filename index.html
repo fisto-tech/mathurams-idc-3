@@ -42,7 +42,7 @@
             width: 100%;
             height: 100%;
             border: none;
-            min-height: 100vh;
+            min-height: 90vh;
         }
         /* ==================== FUTURISTIC ORBITAL PRELOADER ==================== */
         #preloader {
@@ -204,7 +204,7 @@
     </style>
 </head>
 
-<body>
+<body >
 
     <!-- ✅ STEP 1: Preloader is now uncommented and always visible on load -->
     <div id="preloader">
@@ -305,9 +305,12 @@
 
         function load_home() {
             var folderPath = 'For_Desc/index.html';
-            contentDiv.innerHTML = '<object type="text/html" data="' + folderPath +
-                '" style="width:100%; height:100vh; border:none;"></object>';
+            // contentDiv.innerHTML = '<object type="text/html" data="' + folderPath +
+            //     '" style="width:100%; height:%; border:none;"></object>';
+            const height = window.innerWidth <= 480 ? '90vh' : '100vh';
 
+contentDiv.innerHTML = '<object type="text/html" data="' + folderPath +
+    '" style="width:100%; height:' + height + '; border:none;"></object>';
             // Safety fallback timer (60 seconds) in case network drops or external dependencies fail to respond
             setTimeout(() => {
                 if (!isFinished) {

@@ -343,15 +343,38 @@
                 height: 100% !important;
             }
         }
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+  #flipbook {
+    position: relative;
+    width: 354px;
+    height: 504px;
+    margin-left: 0px;
+    top: 15px !important;
+    left: 0px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(1);
+    transform-origin: center top;
+  }
+}
+
+/* Large-Height Mobile Phones */
+@media screen and (max-width: 480px) and (min-height: 800px) {
+  #flipbook {
+    top: 30px !important;
+    /* Add large-height mobile adjustments here */
+  }
+}
     </style>
 </head>
 
-<body>
+<body >
 
 
     <!-- ***************************************************** DC started *************************************************-->
 
-    <div class="catalog-app ">
+    <div class="catalog-app " >
         <div id="bgLayerContainer">
             <div id="bgLayer1" class="bg-layer active"></div>
             <div id="bgLayer2" class="bg-layer"></div>
@@ -1232,7 +1255,7 @@
 
 
                     <!-- *******************************Front Page 5 Start *************************** -->
-                    
+
                     <!-- *******************************Front Page 5 End *************************** -->
 
 
@@ -1449,8 +1472,10 @@
 
                         <img src="../global assets/Images/commonThings/bottom-background.webp" alt="background"
                             class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">05</div>
                     </div>
@@ -1501,8 +1526,10 @@
 
                         <img src="../global assets/Images/products/ward-furniture/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">06</div>
                     </div>
@@ -1558,8 +1585,10 @@
 
                         <img src="../global assets/Images/products/ward-furniture/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">07</div>
                     </div>
@@ -1612,8 +1641,10 @@
 
                         <img src="../global assets/Images/products/ward-furniture/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">08</div>
 
@@ -1661,8 +1692,10 @@
 
                         <img src="../global assets/Images/products/ward-furniture/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">09</div>
                     </div>
@@ -1706,8 +1739,10 @@
 
                         <img src="../global assets/Images/products/ward-furniture/bottom-background.webp"
                             alt="bottom-background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">10</div>
                     </div>
@@ -1740,7 +1775,8 @@
                             data-src="../global assets/Images/products/ward-furniture/over-bed-table/MF-09.svg"
                             data-text="../global assets/Images/products/ward-furniture/over-bed-table/gas-spring/gas-spring-text.svg"
                             data-image="../global assets/Images/products/ward-furniture/over-bed-table/gas-spring/gas-spring-image.png"
-                            class="svg-container absolute w-[9.5%] top-[11%] left-[40%] cursor-pointer cot-btn z-[3]"></div>
+                            class="svg-container absolute w-[9.5%] top-[11%] left-[40%] cursor-pointer cot-btn z-[3]">
+                        </div>
                         <img id="cot-text"
                             src="../global assets/Images/products/ward-furniture/over-bed-table/manual/manual-text.svg"
                             alt="manual-text" class="absolute w-[53%] top-[15%] left-[5%] cot-fade" />
@@ -1754,8 +1790,10 @@
 
                         <img src="../global assets/Images/products/ward-furniture/bottom-background.webp"
                             alt="bottom-background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">11</div>
                     </div>
@@ -1796,8 +1834,10 @@
 
                         <img src="../global assets/Images/products/icu-and-critical-care/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">12</div>
                     </div>
@@ -1831,8 +1871,10 @@
 
                         <img src="../global assets/Images/products/icu-and-critical-care/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">13</div>
                     </div>
@@ -1884,8 +1926,10 @@
 
                         <img src="../global assets/Images/products/labour-and-maternity/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">14</div>
                     </div>
@@ -1919,8 +1963,10 @@
                             alt="configurations" class="absolute w-[40%] top-[51%] right-[7%] z-[3]" />
                         <img src="../global assets/Images/products/labour-and-maternity/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">15</div>
                     </div>
@@ -1942,14 +1988,14 @@
 
                         <div id="btn-mf36"
                             data-src="../global assets/Images/products/labour-and-maternity/baby-cradle/MF-36.svg"
-                            data-text="../global assets/Images/products/labour-and-maternity/baby-cradle/baby-cradle-text.svg"
+                            data-text="../global assets/Images/products/labour-and-maternity/baby-cradle/baby-cradle-ms-text.svg"
                             data-image="../global assets/Images/products/labour-and-maternity/baby-cradle/baby-cradle-image.png"
                             class="svg-container absolute w-[9.5%] top-[11%] left-[18%] cursor-pointer cot-btn"></div>
 
 
                         <div id="btn-mf37"
                             data-src="../global assets/Images/products/labour-and-maternity/baby-cradle/MF-37.svg"
-                            data-text="../global assets/Images/products/labour-and-maternity/baby-cradle/baby-cradle-text.svg"
+                            data-text="../global assets/Images/products/labour-and-maternity/baby-cradle/baby-cradle-ss-text.svg"
                             data-image="../global assets/Images/products/labour-and-maternity/baby-cradle/baby-cradle-image-2.png"
                             class="svg-container absolute w-[9.5%] top-[11%] left-[29%] cursor-pointer cot-btn"></div>
 
@@ -1979,8 +2025,10 @@
 
                         <img src="../global assets/Images/products/labour-and-maternity/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">16</div>
                     </div>
@@ -2020,8 +2068,10 @@
 
                         <img src="../global assets/Images/products/emergency-and-patient-transfer/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">17</div>
                     </div>
@@ -2077,8 +2127,10 @@
 
                         <img src="../global assets/Images/products/emergency-and-patient-transfer/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">18</div>
                     </div>
@@ -2114,8 +2166,10 @@
 
                         <img src="../global assets/Images/products/emergency-and-patient-transfer/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">19</div>
                     </div>
@@ -2164,8 +2218,10 @@
 
                         <img src="../global assets/Images/products/emergency-and-patient-transfer/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">20</div>
                     </div>
@@ -2233,8 +2289,10 @@
 
                         <img src="../global assets/Images/products/emergency-and-patient-transfer/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">21</div>
                     </div>
@@ -2277,8 +2335,10 @@
                             alt="specifications" class="absolute w-[38%] top-[77%] left-[5%] z-[3]" />
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black! right-corner">22</div>
                     </div>
@@ -2322,8 +2382,10 @@
 
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black!  right-corner">23</div>
                     </div>
@@ -2355,8 +2417,10 @@
 
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black!  right-corner">24</div>
                     </div>
@@ -2388,8 +2452,10 @@
 
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black!  right-corner">25</div>
                     </div>
@@ -2421,8 +2487,10 @@
 
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black!  right-corner">26</div>
                     </div>
@@ -2454,8 +2522,10 @@
 
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black!  right-corner">27</div>
                     </div>
@@ -2538,8 +2608,10 @@
 
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black!  right-corner">28</div>
                     </div>
@@ -2604,8 +2676,10 @@
 
                         <img src="../global assets/Images/products/medical-trolleys/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator text-black!  right-corner">29</div>
                     </div>
@@ -2654,8 +2728,10 @@
                             alt="configurations" class="absolute w-[40%] top-[55%] right-[7%] z-[3]" />
                         <img src="../global assets/Images/products/examination-and-consultation/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">30</div>
                     </div>
@@ -2700,8 +2776,10 @@
                             alt="configurations" class="absolute w-[40%] top-[55%] right-[7%] z-[3]" />
                         <img src="../global assets/Images/products/examination-and-consultation/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">31</div>
                     </div>
@@ -2736,8 +2814,10 @@
                             alt="configurations" class="absolute w-[40%] top-[53%] right-[7%] z-[3]" />
                         <img src="../global assets/Images/products/examination-and-consultation/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator left-corner">32</div>
                     </div>
@@ -2805,8 +2885,10 @@
 
                         <img src="../global assets/Images/products/examination-and-consultation/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">33</div>
                     </div>
@@ -2866,8 +2948,10 @@
 
                         <img src="../global assets/Images/products/examination-and-consultation/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">34</div>
                     </div>
@@ -2954,8 +3038,10 @@
 
                         <img src="../global assets/Images/products/stainless-steel-furniture-and-ward-accessories/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">35</div>
                     </div>
@@ -3037,8 +3123,10 @@
 
                         <img src="../global assets/Images/products/stainless-steel-furniture-and-ward-accessories/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">36</div>
                     </div>
@@ -3101,8 +3189,10 @@
 
                         <img src="../global assets/Images/products/general-furniture/bottom-background.webp"
                             alt="background" class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">37</div>
                     </div>
@@ -3194,8 +3284,10 @@
 
                         <img src="../global assets/Images/products/accessories/bottom-background.webp" alt="background"
                             class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">38</div>
                     </div>
@@ -3286,8 +3378,10 @@
 
                         <img src="../global assets/Images/products/accessories/bottom-background.webp" alt="background"
                             class="absolute w-[100%] bottom-0 left-0" />
-                        <img src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
-                            class="absolute w-[25%] bottom-[1.25%] right-[5%]" />
+                        <a href="https://www.mathuramsindia.com/" target="_blank"
+                            class="absolute w-[25%] bottom-[3.25%] right-[5%] z-[99999]" style="z-index: 99999;"><img
+                                src="../global assets/Images/commonThings/website-link.svg" alt="website-link"
+                                class="w-[100%]" /></a>
 
                         <div class="page-number-indicator right-corner">39</div>
                     </div>
@@ -3335,25 +3429,33 @@
 
                         <!-- social lines  -->
 
-                        <a href="https://www.instagram.com/mathurams_medical_engineering?stkn=ZWQ2bzUzbTNkZ2xz" target="_blank" class="absolute w-[5%] left-[13%] top-[95%] z-[10]">
-                            <img src="../global assets/Images/contact-us/instagram-icon.svg" alt="call" class="w-[100%]" />
+                        <a href="https://www.instagram.com/mathurams_medical_engineering?stkn=ZWQ2bzUzbTNkZ2xz"
+                            target="_blank" class="absolute w-[5%] left-[13%] top-[95%] z-[10]">
+                            <img src="../global assets/Images/contact-us/instagram-icon.svg" alt="call"
+                                class="w-[100%]" />
                         </a>
-                        <a href="https://www.facebook.com/Sri.Mathurams.Medical.Engineering?rdid=TLtmZ2MnguAs7ccO&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18FXAqSwNt%2F#" target="_blank" class="absolute w-[5%] left-[20%] top-[95%] z-[10]">
-                            <img src="../global assets/Images/contact-us/facebook-icon.svg" alt="call" class="w-[100%]" />
+                        <a href="https://www.facebook.com/Sri.Mathurams.Medical.Engineering?rdid=TLtmZ2MnguAs7ccO&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18FXAqSwNt%2F#"
+                            target="_blank" class="absolute w-[5%] left-[20%] top-[95%] z-[10]">
+                            <img src="../global assets/Images/contact-us/facebook-icon.svg" alt="call"
+                                class="w-[100%]" />
                         </a>
-                        <a href="https://www.youtube.com/@srimathuramsmedicalengineering?si=vmIV_HU60XRpsX2i" target="_blank" class="absolute w-[5%] left-[27%] top-[95%] z-[10]">
-                            <img src="../global assets/Images/contact-us/youtube-icon.svg" alt="call" class="w-[100%]" />
+                        <a href="https://www.youtube.com/@srimathuramsmedicalengineering?si=vmIV_HU60XRpsX2i"
+                            target="_blank" class="absolute w-[5%] left-[27%] top-[95%] z-[10]">
+                            <img src="../global assets/Images/contact-us/youtube-icon.svg" alt="call"
+                                class="w-[100%]" />
                         </a>
-                        <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGLpuXT_Iq68gAAAaDYmbhggu-AI8sBuhBUEPkRryRsTidyT9uW7A0xXF1mFbfkVi6H0ruhYBP9MRrbpSnAiZs88VQ-M-KHaAXMVVgnDk2prF6HkPxReNkFMKq3IiffifrTs3c=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fmathurams-medical-engineering%2F" target="_blank" class="absolute w-[5%] left-[34%] top-[95%] z-[10]">
-                            <img src="../global assets/Images/contact-us/linkedin-icon.svg" alt="call" class="w-[100%]" />
+                        <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGLpuXT_Iq68gAAAaDYmbhggu-AI8sBuhBUEPkRryRsTidyT9uW7A0xXF1mFbfkVi6H0ruhYBP9MRrbpSnAiZs88VQ-M-KHaAXMVVgnDk2prF6HkPxReNkFMKq3IiffifrTs3c=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fmathurams-medical-engineering%2F"
+                            target="_blank" class="absolute w-[5%] left-[34%] top-[95%] z-[10]">
+                            <img src="../global assets/Images/contact-us/linkedin-icon.svg" alt="call"
+                                class="w-[100%]" />
                         </a>
-                         <!-- . -->
+                        <!-- . -->
                         <a href="tel:+919842204966" class="absolute w-[42%] left-[60%] top-[84%] z-[10]">
                             <img src="../global assets/Images/contact-us/call.svg" alt="call" class="w-[100%]" />
                         </a>
 
-                        
-                         <a href="tel:+918883011166" class="absolute w-[42%] left-[77%] top-[84%] z-[12]">
+
+                        <a href="tel:+918883011166" class="absolute w-[42%] left-[77%] top-[84%] z-[12]">
                             <img src="../global assets/Images/contact-us/call-2.svg" alt="call" class="w-[100%]" />
                         </a>
                         <a href="mailto:mathuramindia@gmail.com" class="absolute w-[36%] left-[60%] top-[89%] z-[10]">
@@ -4920,10 +5022,19 @@
 
             loadSVGs();
 
-            // Add click event for all website-link.svg images
+            // Add click event for all website-link.svg images and their anchors
             document.querySelectorAll('img[src*="website-link.svg"]').forEach(img => {
                 img.style.cursor = 'pointer';
-                img.addEventListener('click', () => {
+                img.style.zIndex = '99999';
+                img.style.position = 'absolute';
+                img.style.pointerEvents = 'auto';
+                if (img.parentElement && img.parentElement.tagName === 'A') {
+                    img.parentElement.style.zIndex = '99999';
+                    img.parentElement.style.position = 'absolute';
+                    img.parentElement.style.pointerEvents = 'auto';
+                }
+                img.addEventListener('click', (e) => {
+                    e.stopPropagation();
                     window.open('https://www.mathuramsindia.com/', '_blank');
                 });
             });
@@ -5063,8 +5174,8 @@
     <!-- PRODUCT IMAGE LIGHTBOX POPUP MODAL -->
     <div id="product-image-modal" class="product-modal-overlay">
         <!-- <div class="product-modal-container"> -->
-            <button id="product-modal-close" class="product-modal-close" title="Close" aria-label="Close">&times;</button>
-            <img id="product-modal-img" src="" alt="Product Preview" class="product-modal-img" />
+        <button id="product-modal-close" class="product-modal-close" title="Close" aria-label="Close">&times;</button>
+        <img id="product-modal-img" src="" alt="Product Preview" class="product-modal-img" />
         <!-- </div> -->
     </div>
 </body>
