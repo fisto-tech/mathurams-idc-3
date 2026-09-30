@@ -5094,74 +5094,89 @@
         // Track and report asset loading progress to parent frame so preloader runs until ALL assets are loaded
         (function () {
             function initAssetTracker() {
+                const trackedElements = new Set();
                 let assetsLoaded = 0;
-                let isSignaled = false;
+                let totalAssets = 0;
+                let isImagesFinished = false;
 
-                function sendSignal() {
-                    if (isSignaled) return;
-                    isSignaled = true;
+                function reportProgress() {
+                    const ratio = totalAssets > 0 ? Math.min(1, Math.max(0, assetsLoaded / totalAssets)) : 1;
                     try {
-                        window.parent.postMessage({ action: 'loadProgress', percent: 100 }, '*');
-                        window.parent.postMessage({ action: 'contentReady' }, '*');
-                    } catch (e) { }
-                }
-
-                // Collect all image elements in document
-                const allImages = Array.from(document.querySelectorAll('img'));
-                const svgContainers = Array.from(document.querySelectorAll('.svg-container[data-src]'));
-
-                // Total count of assets to track
-                let totalAssets = allImages.length + svgContainers.length;
-
-                if (totalAssets === 0) {
-                    sendSignal();
-                    return;
-                }
-
-                function onItemLoaded() {
-                    assetsLoaded++;
-                    const safeTotal = totalAssets > 0 ? totalAssets : 1;
-                    const percent = Math.min(100, Math.max(0, Math.floor((assetsLoaded / safeTotal) * 100)));
-                    if (!Number.isFinite(percent)) return;
-                    try {
-                        window.parent.postMessage({ action: 'loadProgress', percent: percent }, '*');
+                        window.parent.postMessage({
+                            action: 'loadProgress',
+                            loaded: assetsLoaded,
+                            total: totalAssets,
+                            ratio: ratio
+                        }, '*');
                     } catch (e) { }
 
-                    if (assetsLoaded >= totalAssets) {
-                        sendSignal();
+                    if (totalAssets > 0 && assetsLoaded >= totalAssets && !isImagesFinished) {
+                        isImagesFinished = true;
+                        try {
+                            window.parent.postMessage({ action: 'assetsLoaded' }, '*');
+                        } catch (e) { }
                     }
                 }
 
-                // Process images
-                allImages.forEach(img => {
-                    if (img.complete) {
-                        onItemLoaded();
-                    } else {
-                        img.addEventListener('load', onItemLoaded, { once: true });
-                        img.addEventListener('error', onItemLoaded, { once: true });
-                    }
-                });
+                function trackItem(el, isSvg = false) {
+                    if (trackedElements.has(el)) return;
+                    trackedElements.add(el);
+                    totalAssets++;
 
-                // Process SVG containers
-                svgContainers.forEach(container => {
-                    if (container.dataset.loaded || container.children.length > 0) {
-                        onItemLoaded();
-                    } else {
-                        const checkInterval = setInterval(() => {
-                            if (container.dataset.loaded || container.children.length > 0) {
+                    if (isSvg) {
+                        if (el.dataset.loaded || el.children.length > 0) {
+                            assetsLoaded++;
+                            reportProgress();
+                        } else {
+                            const checkInterval = setInterval(() => {
+                                if (el.dataset.loaded || el.children.length > 0) {
+                                    clearInterval(checkInterval);
+                                    assetsLoaded++;
+                                    reportProgress();
+                                }
+                            }, 50);
+                            setTimeout(() => {
                                 clearInterval(checkInterval);
-                                onItemLoaded();
-                            }
-                        }, 50);
-                        // Timeout fallback per container (500ms max) so a failed SVG fetch doesn't stall progress
-                        setTimeout(() => {
-                            clearInterval(checkInterval);
-                            if (!container.dataset.loaded && container.children.length === 0) {
-                                onItemLoaded();
-                            }
-                        }, 500);
+                                if (!el.dataset.loaded && el.children.length === 0) {
+                                    assetsLoaded++;
+                                    reportProgress();
+                                }
+                            }, 500);
+                        }
+                    } else {
+                        if (el.complete) {
+                            assetsLoaded++;
+                            reportProgress();
+                        } else {
+                            el.addEventListener('load', () => { assetsLoaded++; reportProgress(); }, { once: true });
+                            el.addEventListener('error', () => { assetsLoaded++; reportProgress(); }, { once: true });
+                        }
                     }
-                });
+                }
+
+                function scanAssets() {
+                    const images = document.querySelectorAll('img');
+                    images.forEach(img => trackItem(img, false));
+
+                    const svgs = document.querySelectorAll('.svg-container[data-src]');
+                    svgs.forEach(svg => trackItem(svg, true));
+                }
+
+                scanAssets();
+
+                const observer = new MutationObserver(() => scanAssets());
+                observer.observe(document.body || document.documentElement, { childList: true, subtree: true });
+
+                const interval = setInterval(scanAssets, 200);
+                setTimeout(() => clearInterval(interval), 3000);
+
+                if (document.readyState === 'complete') {
+                    try { window.parent.postMessage({ action: 'contentReady' }, '*'); } catch (e) { }
+                } else {
+                    window.addEventListener('load', () => {
+                        try { window.parent.postMessage({ action: 'contentReady' }, '*'); } catch (e) { }
+                    }, { once: true });
+                }
             }
 
             if (document.readyState === 'complete' || document.readyState === 'interactive') {
